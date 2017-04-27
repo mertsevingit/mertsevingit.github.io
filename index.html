@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+   <title></title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
+    
+ </head>
+  
+  <body>
+  
+   <style>
+		.mySlides {
+			display:none
+				}
+	
+			.w3-left, .w3-right, .w3-badge {
+			cursor:pointer
+		}
+	
+		.w3-badge {
+		height:13px;width:13px;padding:0
+		}
+
+		
+		
+		#orta {
+			width:940px; 
+			height:300px;
+			margin:0 auto; 
+			padding:10px;
+			
+		}
+		#ortasol {
+			height:200px;
+			width:270px;	 
+			float:left;
+			padding-left:5px;
+		}
+		#ortasag {
+			height:200px;
+			width:350px;
+			   
+			float:left;
+			margin:100px 0 0 5px;
+			padding-left:20px;
+			font-size: 10pt;
+		}
+  
+  </style>
+
+  
+    <nav class="navbar navbar-default">
+    	<div class="container-fluid">
+
+			
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navbar" aria-expanded="false">open!</button>
+    		</div> 
+
+			
+    		<div class="collapse navbar-collapse" id="main_navbar">
+        		<ul class="nav navbar-nav">
+          			<li> <a href= "index.html" >HOMEPAGE</a></th>
+					<li> <a href= "aboutme.html" >ABOUTME</a></th>
+					<li> <a href= "gallery.html" >GALLERY</a></th>
+					<li> <a href= "familytree.html" >FAMILY</a></th>
+					<li> <a href= "hometown.html" >HOMETOWN</a></th>
+					<li> <a href= "registration.html" >REGISTRATION</a></th>
+					<li> <a href= "contact.html" >CONTACT</a></th>
+        		</ul>
+        	</div> 
+
+      	</div> 
+    </nav>
+
+
+  <div class="w3-container">
+
+</div>
+
+<div class="w3-content w3-display-container" style="max-width:500px" >
+	<img class="mySlides" src="image\foto1.jpg"  style="width:100%">
+		<div class="w3-display-topleft w3-large w3-container w3-padding-1 w3-text-black ">
+			<ul class="b">
+				<a href= "hometown.html"><li><b>HOMETOWN</li></a>
+				<a href= "hometown.html"><li><b>GALLERY</li></a>
+				<a href= "hometown.html"><li><b>FAMILYTREE</li></a>
+			</ul>
+		</div>  
+  
+	<img class="mySlides" src="image\foto2.png"  style="width:100%" > 
+		
+  		
+	<img class="mySlides" src="image\foto3.jpg"  style="width:100%" >
+		
+ 		
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div><br><br>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+
+	<div id="orta">
+	
+		<div id="ortasol">
+			<h3>About Me</h3>
+			<img src="image\aa.JPG" height=350 width=250>
+		</div>
+		<div id="ortasag">
+			<p>
+			Hello dear friends. I'm Mert Sevingit. I was born in 1994 in Eskişehir. I study primary school, middle school and high school in Eskişehir.<a href= "aboutme.html"> <b>click here to continue>></br></a>
+		</div>	
+
+	</div>
+
+
+  
+    <!-- jquery libraries -->
+    <script src="js/jquery.min.js"></script> 
+    <!-- bootsrap libraries -->
+    <script src="js/bootstrap.min.js"></script> 
+
+  
+  
+  
+  </body>
+
+</html>
